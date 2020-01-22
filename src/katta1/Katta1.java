@@ -1,11 +1,16 @@
 package katta1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Katta1 {
 
     public static void main(String[] args) {
-        Person person = new Person("Blas", new Date(49, 8, 25));
+        Calendar date;
+        date = GregorianCalendar.getInstance();
+        date.set(1949, 9, 24);
+        
+        Person person = new Person("Blas", date);
         System.out.println(person.getName() + " tine " + person.getAge());
     }
     
